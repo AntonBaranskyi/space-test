@@ -1,0 +1,43 @@
+export const theme = {
+  colors: {
+    white: '#fff',
+    black: '#000',
+    btnPrimary: '#ECECEC',
+    btnSecondary: '#D3EAFF',
+    textPrimary: '#556B84',
+  },
+
+  fonts: {
+    sizeXxs: '12px',
+    sizeXs: '14px',
+    sizeS: '16px',
+    sizeM: '20px',
+    sizeL: '22px',
+    sizeXxl: '32px',
+    sizeXxxl: '48px',
+    weightRegular: '600',
+    weightSemiBold: '700',
+    weightBold: '800',
+    lineHeightXxs: '11px',
+    lineHeightXs: '11px',
+    lineHeightS: '15px',
+    lineHeightM: '21px',
+    lineHeightL: '26px',
+    lineHeightXl: '31px',
+    lineHeightXxl: '41px',
+    lineHeightXxxl: '56px',
+    lineHeightTablet: '48px',
+    lineHeightDesktop: '64px',
+    spacingS: '-0.01em',
+    spacingDefault: '0',
+    spacingM: '0.04em',
+  },
+  transition: {
+    slower: '0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+    faster: '0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+  },
+  sizes: {
+    headerHeigth: '64px',
+    footerHeigth: '96px',
+  },
+};
