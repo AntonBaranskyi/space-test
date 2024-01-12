@@ -12,9 +12,9 @@ export const Header = () => {
 
       <Navigation />
 
-      <ButtonsWrapper >
-        <Button isPrimary icon={heart} />
-        <Button label='Sign in' />
+      <ButtonsWrapper>
+        <Button isPrimary icon={heart} width={'53px'} />
+        <Button label='Sign in' width={'163px'} />
       </ButtonsWrapper>
     </HeaderWrapper>
   );

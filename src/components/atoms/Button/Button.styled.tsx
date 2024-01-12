@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 
-export const ButtonWrapper = styled.button<{ isPrimary: boolean }>`
+export const ButtonWrapper = styled.button<{
+  isPrimary: boolean;
+  width?: string;
+  height?: string;
+}>`
   display: flex;
   align-items: center;
   justify-content: center;
   padding-block: 12px;
 
-  /* height: 53px; */
+  height: ${(props) => `${props.height}`};
+  width: ${(props) => `${props.width}`};
 
   background-color: ${(props) => (props.isPrimary ? '#ECECEC' : '#D3EAFF')};
   color: #000;

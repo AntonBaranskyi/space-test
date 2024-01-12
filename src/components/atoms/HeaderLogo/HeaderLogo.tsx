@@ -1,4 +1,3 @@
-import React from 'react';
 import { HeaderLogoItem } from './HeaderLogo.styled';
 
 import logo from '../../../assets/images/logo.png';

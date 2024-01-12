@@ -26,11 +26,9 @@ export const pageGridMixin = css`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 24px;
-  padding-inline: 60px;
 
   ${onTablet(`
     grid-template-columns: repeat(4, 1fr);
-    padding-inline: 80px;
   `)}
 
   ${onDesktop(`
