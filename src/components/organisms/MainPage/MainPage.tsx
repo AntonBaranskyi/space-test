@@ -22,13 +22,10 @@ export const MainPage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 5000,
     cssEase: 'linear',
     arrows: false,
-    // appendDots: (dots) => (
-    //   <CustomDots dots={dots} onDotClick={() => {}} activeSlide={0} isHeader={true} />
-    // ),
   };
   return (
     <MainWrapper>

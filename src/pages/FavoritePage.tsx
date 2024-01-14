@@ -1,4 +1,3 @@
-import React from 'react';
 import { FavoritesMain } from '../components/organisms/FavoritesMain';
 import { useRecoilState } from 'recoil';
 import { favoriteState } from '../store/favoriteState';

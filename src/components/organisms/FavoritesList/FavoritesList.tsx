@@ -1,6 +1,10 @@
 import { useRecoilState } from 'recoil';
 import { favoriteState } from '../../../store/favoriteState';
-import { ClearText, FavoriteWrapper } from './FavoriteList.styled';
+import {
+  ClearText,
+  FavoriteList,
+  FavoriteWrapper,
+} from './FavoriteList.styled';
 import { Card } from '../../molecules/Card';
 import { useCardActions } from '../../../hooks/useCardActions';
 
@@ -12,9 +16,11 @@ export const FavoritesList = () => {
   return (
     <FavoriteWrapper>
       <ClearText onClick={onClearAllFavorites}>Clear all</ClearText>
-      {favoriteFlights.map((favorite, i) => (
-        <Card rocket={favorite} index={i} />
-      ))}
+      <FavoriteList>
+        {favoriteFlights.map((favorite, i) => (
+          <Card rocket={favorite} index={i} />
+        ))}
+      </FavoriteList>
     </FavoriteWrapper>
   );
 };

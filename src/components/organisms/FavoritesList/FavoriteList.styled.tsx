@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { onPaddingChangeContent } from '../../../mixins/PageMixins';
 import { StyledText } from '../../atoms/Text/Text.styled';
 
+import { onDesktop } from '../../../mixins/PageMixins';
+
 export const FavoriteWrapper = styled.div`
   ${onPaddingChangeContent};
 
@@ -16,5 +18,17 @@ export const ClearText = styled(StyledText)`
 
   cursor: pointer;
 
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+`;
+
+export const FavoriteList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+
+  justify-content: center;
+
+  ${onDesktop(`
+   justify-content: start;
+  `)}
 `;

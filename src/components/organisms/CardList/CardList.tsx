@@ -14,13 +14,18 @@ import { useRecoilState } from 'recoil';
 import { rocketsFlights } from '../../../store/rocketsFlightState';
 
 import { Spinner } from '../../atoms/Spinner';
+import { useSliderCards } from '../../../hooks/useSliderCards';
 
 export const CardList = () => {
-  const sliderRef = useRef<Slider | null>(null);
-
+  const {
+    onSetCurrentSlide,
+    sliderRef,
+    handleDotClick,
+    activeSlide,
+    goToNextSlide,
+    goToPrevSlide,
+  } = useSliderCards();
   const [rockets, setRockets] = useRecoilState(rocketsFlights);
-
-  const [currentSlide, setCurrentSlide] = useState(0);
 
   const { data, loading } = useQuery(GET_ALL_FLIGHTS);
 
@@ -37,29 +42,29 @@ export const CardList = () => {
     dots: true,
     arrows: true,
     beforeChange: (_, nextSlide) => {
-      setCurrentSlide(nextSlide);
+      onSetCurrentSlide(nextSlide);
     },
     appendDots: (dots) => (
       <CustomDots
         dots={dots}
         onDotClick={handleDotClick}
-        activeSlide={currentSlide}
+        activeSlide={activeSlide}
       />
     ),
-  };
-
-  const goToNextSlide = () => {
-    sliderRef?.current?.slickNext();
-  };
-
-  const goToPrevSlide = () => {
-    sliderRef?.current?.slickPrev();
-  };
-
-  const handleDotClick = (index: number) => {
-    console.log('click');
-
-    sliderRef?.current?.slickGoTo(index);
+    responsive: [
+      {
+        breakpoint: 1450,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   if (loading) {

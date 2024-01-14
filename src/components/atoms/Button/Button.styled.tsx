@@ -22,4 +22,8 @@ export const ButtonWrapper = styled.button<{
   text-transform: uppercase;
 
   cursor: pointer;
+
+  &:hover {
+    background-color: ${(props) => (props.isPrimary ? '#CCCCCC' : '#A8D0FF')};
+  }
 `;
