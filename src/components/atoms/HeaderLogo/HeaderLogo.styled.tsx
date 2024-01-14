@@ -7,5 +7,4 @@ export const HeaderLogoItem = styled.img`
   padding-block: 19px;
   cursor: pointer;
 
-  z-index: 6;
 `;

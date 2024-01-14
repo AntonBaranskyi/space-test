@@ -14,7 +14,7 @@ export const DotContainer = styled.div<{
   cursor: pointer;
 
   border: ${(props) =>
-    `${props.isHeader ? '1px solid #fff' : '1px solid #1e1e1e'}`};
+    `${props.isHeader ? '1px solid #1e1e1e' : '1px solid #1e1e1e'}`};
 
   position: relative;
 `;

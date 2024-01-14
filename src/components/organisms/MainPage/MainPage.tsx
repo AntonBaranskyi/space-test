@@ -7,7 +7,7 @@ import { MainPageSlide } from '../MainPageSlider';
 import back1 from '../../../assets/images/main_back.png';
 import back2 from '../../../assets/images/main_back2.png';
 import back3 from '../../../assets/images/main_back3.png';
-import { CustomDots } from '../../molecules/CustomDots';
+import { MainWrapper } from './MainPage.styled';
 
 const backgrounds = [
   `url(${back1}) no-repeat center/cover`,
@@ -26,15 +26,17 @@ export const MainPage = () => {
     autoplaySpeed: 5000,
     cssEase: 'linear',
     arrows: false,
-    appendDots: (dots) => (
-      <CustomDots dots={dots} onDotClick={() => {}} activeSlide={0} isHeader />
-    ),
+    // appendDots: (dots) => (
+    //   <CustomDots dots={dots} onDotClick={() => {}} activeSlide={0} isHeader={true} />
+    // ),
   };
   return (
-    <Slider {...settings}>
-      {backgrounds.map((background) => (
-        <MainPageSlide key={background} background={background} />
-      ))}
-    </Slider>
+    <MainWrapper>
+      <Slider {...settings}>
+        {backgrounds.map((background) => (
+          <MainPageSlide key={background} background={background} />
+        ))}
+      </Slider>
+    </MainWrapper>
   );
 };

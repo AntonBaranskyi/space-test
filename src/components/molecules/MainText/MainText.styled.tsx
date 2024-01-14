@@ -5,5 +5,8 @@ import { onPaddingChangeContent } from '../../../mixins/PageMixins';
 export const TextWrapper = styled.div`
   ${onPaddingChangeContent}
 
-  grid-column: 1/-1;
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
 `;

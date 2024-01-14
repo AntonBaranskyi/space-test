@@ -9,6 +9,8 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme.tsx';
 
+import './styles/style.scss';
+
 const client = new ApolloClient({
   uri: 'https://spacex-production.up.railway.app/',
   cache: new InMemoryCache(),

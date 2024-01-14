@@ -1,4 +1,3 @@
-import React from 'react';
 import { useRecoilState } from 'recoil';
 import { favoriteState } from '../../../store/favoriteState';
 import { ClearText, FavoriteWrapper } from './FavoriteList.styled';
