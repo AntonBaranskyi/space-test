@@ -4,10 +4,14 @@ import { navigationData } from '../../../constants/navLinkData';
 
 import { INavigation } from '../../../types/navTypes';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const Navigation = () => {
-  const [activeNav, setActiveNav] = useState<INavigation | null>();
+  const { pathname } = useLocation();
+
+  const defaultState = pathname === '/' ? navigationData[0] : null;
+
+  const [activeNav, setActiveNav] = useState<INavigation | null>(defaultState);
   const navigate = useNavigate();
 
   const onHandleSetActive = (navItem: INavigation) => {
