@@ -6,7 +6,7 @@ import Slider, { Settings } from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect } from 'react';
 import { CustomDots } from '../../molecules/CustomDots';
 import { useQuery } from '@apollo/client';
 import { GET_ALL_FLIGHTS } from '../../../query/flights';
