@@ -4,6 +4,7 @@ export const ButtonWrapper = styled.button<{
   isPrimary: boolean;
   width?: string;
   height?: string;
+  isActive?: boolean;
 }>`
   display: flex;
   align-items: center;
@@ -13,7 +14,8 @@ export const ButtonWrapper = styled.button<{
   height: ${(props) => `${props.height}`};
   width: ${(props) => `${props.width}`};
 
-  background-color: ${(props) => (props.isPrimary ? '#ECECEC' : '#D3EAFF')};
+  background-color: ${(props) =>
+    props.isActive ? '#DD377D' : props.isPrimary ? '#ECECEC' : '#D3EAFF'};
   color: #000;
   font-size: 24px;
   font-weight: 600;

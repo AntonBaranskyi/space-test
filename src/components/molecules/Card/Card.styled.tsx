@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { onDesktop, onTablet } from '../../../mixins/PageMixins';
+import { onDesktop } from '../../../mixins/PageMixins';
 
 export const CardWrapper = styled.div`
   border: 1px solid #d3eaff;

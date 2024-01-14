@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from './IconItem.styled';
 
 type Props = {
-  icon: string;
+  icon: string | React.ReactElement;
   height?: number;
   width?: number;
 };
@@ -12,5 +12,9 @@ export const IconItem: React.FC<Props> = ({
   height = 24,
   width = 24,
 }) => {
-  return <Icon src={icon} alt='icon' heightItem={height} widthItem={width} />;
+  return typeof icon === 'string' ? (
+    <Icon src={icon} alt='icon' heightItem={height} widthItem={width} />
+  ) : (
+    <div>{icon}</div>
+  );
 };

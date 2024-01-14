@@ -5,10 +5,11 @@ import { IconItem } from '../IconItem';
 interface Props extends ComponentPropsWithoutRef<'button'> {
   label?: string;
   isPrimary?: boolean;
-  icon?: string;
+  icon?: string | React.ReactElement;
 
   height?: string;
   width?: string;
+  isActive?: boolean;
 }
 
 export const Button: React.FC<Props> = ({
@@ -17,9 +18,17 @@ export const Button: React.FC<Props> = ({
   icon,
   width,
   height,
+  isActive,
+  ...otherProps
 }) => {
   return (
-    <ButtonWrapper isPrimary={isPrimary} width={width} height={height}>
+    <ButtonWrapper
+      isPrimary={isPrimary}
+      width={width}
+      height={height}
+      isActive={isActive}
+      {...otherProps}
+    >
       {icon ? <IconItem icon={icon} /> : label}
     </ButtonWrapper>
   );

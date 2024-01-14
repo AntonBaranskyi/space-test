@@ -4,7 +4,7 @@ import { navigationData } from '../../../constants/navLinkData';
 
 export const Navigation = () => {
   return (
-    <nav>
+    <nav style={{ zIndex: 4 }}>
       <NavList>
         {navigationData.map((navData) => (
           <NavItem navItem={navData} />

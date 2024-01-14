@@ -1,12 +1,13 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import Slider from 'react-slick';
+import Slider, { Settings } from 'react-slick';
 import { MainPageSlide } from '../MainPageSlider';
 
 import back1 from '../../../assets/images/main_back.png';
 import back2 from '../../../assets/images/main_back2.png';
 import back3 from '../../../assets/images/main_back3.png';
+import { CustomDots } from '../../molecules/CustomDots';
 
 const backgrounds = [
   `url(${back1}) no-repeat center/cover`,
@@ -15,16 +16,19 @@ const backgrounds = [
 ];
 
 export const MainPage = () => {
-  const settings = {
+  const settings: Settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // dots: true,
-    autoplay: true,
+    dots: true,
+    // autoplay: true,
     autoplaySpeed: 5000,
     cssEase: 'linear',
     arrows: false,
+    appendDots: (dots) => (
+      <CustomDots dots={dots} onDotClick={() => {}} activeSlide={0} isHeader />
+    ),
   };
   return (
     <Slider {...settings}>

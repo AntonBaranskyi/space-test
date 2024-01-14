@@ -11,8 +11,19 @@ export const CardListWrapper = styled.div`
   margin-bottom: 40px;
 `;
 
-export const CardListGrid = styled.div`
-  ${pageGridMixin}
+export const SliderContainer = styled.div`
+  /* margin: 0 auto;
+  justify-content: center; */
 
-  grid-gap: 24px;
+  margin-bottom: 40px;
+  /* display: flex; */
 `;
+
+export const CardGrid = styled.div`
+  ${pageGridMixin}
+  grid-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+`;
+
+
