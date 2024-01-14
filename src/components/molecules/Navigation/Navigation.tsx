@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const Navigation = () => {
-  const [activeNav, setActiveNav] = useState<INavigation | null>(null);
+  const [activeNav, setActiveNav] = useState<INavigation | null>();
   const navigate = useNavigate();
 
   const onHandleSetActive = (navItem: INavigation) => {
