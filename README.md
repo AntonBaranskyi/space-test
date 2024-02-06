@@ -1,10 +1,12 @@
-# Space test task (test task for)
+# Space test task (test task for SpdLoad)
 
- Please, check the demo page of the app --- [DEMO](https://landing-anime-test.vercel.app/)
-  
+ Please, check the demo page of the app --- [DEMO](https://space-test-theta.vercel.app/)
+
   # Technologies used
 - React.js
 - TypeScript
-- Scss modules
-- React responsive
-- React context
+- Recoil
+- Styled Components
+- React Appolo
+- React Router DOM
+- graphql
